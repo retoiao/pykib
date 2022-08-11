@@ -27,13 +27,13 @@ import pprint
 
 
 
-import pykib_base.ui
-import pykib_base.arguments
-import pykib_base.mainWindow
-import pykib_base.remotePykibWebsocketServer
+import pykib.pykib_base.ui
+import pykib.pykib_base.arguments
+import pykib.pykib_base.mainWindow
+import pykib.pykib_base.remotePykibWebsocketServer
 import faulthandler
 
-from remotePykib import RemotePykib
+from pykib.remotePykib import RemotePykib
 
 #
 from PyQt6 import QtNetwork
@@ -71,7 +71,7 @@ class Pykib():
         # ----------------------------------------------------------
 
         # Parsing Arguments
-        self.args = pykib_base.arguments.getArguments(self.dirname)
+        self.args = pykib.pykib_base.arguments.getArguments(self.dirname)
 
         #Set Logging:
         logging.basicConfig(
@@ -201,7 +201,7 @@ class Pykib():
             print("When Autologin is enabled at least autoLogonUser and autoLogonPassword has to be set also")
             sys.exit()
 
-        view = pykib_base.mainWindow.MainWindow(self.args, self.dirname)
+        view = pykib.pykib_base.mainWindow.MainWindow(self.args, self.dirname)
 
         # Set Dimensions
         if (self.args.fullscreen):

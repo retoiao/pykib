@@ -33,7 +33,7 @@ from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QFileDialog
 from PyQt6.QtCore import QSize, QUrl, Qt
 
-from pykib_base.myUrlSchemeHandler import myUrlSchemeHandler
+from pykib.pykib_base.myUrlSchemeHandler import myUrlSchemeHandler
 
 class myQWebEnginePage(QWebEnginePage):
     args = 0
